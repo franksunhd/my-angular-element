@@ -9,13 +9,16 @@ import { HttpClientModule } from '@angular/common/http';
 // 引用组件
 import { AppComponent } from './app.component';
 import { HeadComponent } from './head/head.component';
+import { SideComponent } from './side/side.component';
 
 @NgModule({
   // 调用组件
   declarations: [
     AppComponent,
-    HeadComponent
+    HeadComponent,
+    SideComponent
   ],
+  // 调用模块
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
