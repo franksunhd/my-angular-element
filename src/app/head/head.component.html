@@ -1,0 +1,13 @@
+<div style="text-align:center">
+  <h2>欢迎学习{{title}}</h2>
+  <el-form label-width="100px" :inline="true">
+    <el-form-item label="姓名">
+      <el-input [model]="userName"></el-input>
+    </el-form-item>
+    <el-form-item label="性别">
+      <el-select [model]="sex">
+        <el-option *ngFor="let item of SexArr" [label]="item.value" [value]="item.id"></el-option>
+      </el-select>
+    </el-form-item>
+  </el-form>
+</div>
