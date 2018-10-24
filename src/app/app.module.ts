@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeadComponent } from './head/head.component';
 import { SideComponent } from './side/side.component';
+import { HeroService } from './hero/hero.service';
 
 @NgModule({
   // 调用组件
@@ -27,7 +28,9 @@ import { SideComponent } from './side/side.component';
     HttpClientModule
   ],
   // 调用服务
-  providers: [],
+  providers: [
+    HeroService
+  ],
   // 调用依赖
   bootstrap: [AppComponent]
 })
