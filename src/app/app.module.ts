@@ -6,6 +6,7 @@ import { ElModule } from 'element-angular';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
 
 // 引用组件
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { NumPipe } from './pipe/num.pipe';
 // 引入服务
 import { HeroService } from './hero/hero.service';
 import { BookService } from './service/book.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   // 调用组件/指令/管道
@@ -36,6 +38,7 @@ import { BookService } from './service/book.service';
     MyDirsDirective,
     PipePipe,
     NumPipe,
+    HomeComponent,
   ],
   // 调用模块
   imports: [
@@ -44,7 +47,7 @@ import { BookService } from './service/book.service';
     ElModule.forRoot(),
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   // 调用服务
   providers: [
