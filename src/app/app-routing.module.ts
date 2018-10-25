@@ -24,6 +24,7 @@ import { PipeComponent } from './pipe/pipe.component';
 import { SideComponent } from './side/side.component';
 import { HomeComponent } from './home/home.component';
 import { IndexComponent } from './index/index.component';
+import { ProjectComponent } from './project/project.component';
 
 /*
  * 1. 路由是自上而下查找的
@@ -44,6 +45,8 @@ const routes: Routes = [
   {path: 'head', component: HeadComponent},
   {path: 'pipe', component: PipeComponent},
   {path: 'http', component: HttpComponent},
+  // 2. 路径传值
+  {path: 'project/:name/:age', component: ProjectComponent},
 ];
 
 
