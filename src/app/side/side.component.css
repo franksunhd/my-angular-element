@@ -1,0 +1,24 @@
+p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.bgGreen {
+  background-color: green;
+  color: #fff;
+}
+
+table {
+  width: 200px;
+  height: 100px;
+  text-align: center;
+}

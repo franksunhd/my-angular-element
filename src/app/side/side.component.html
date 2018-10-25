@@ -1,3 +1,113 @@
-<p>
-  side works!
-</p>
+<div>
+  <h1>----------------angular 绑定数据--------------</h1>
+  <p>
+    angular 绑定数据 <br />
+    1. 插值表达式 可以放置变量,js 表达式,不能放 js 语句 <br>
+    2. 使用 将 html 标签中的属性绑定在元素上 <br>
+    3. 绑定事件 <br>
+    4. angular5的数据绑定是单向的，如果想数据的<span class="red">双向绑定</span>
+      如果想数据的，必须导入 <span class="red">FormsModel模块</span> <br>
+  </p>
+  <p>刘备字{{liubei}}</p>
+  <p>5 + 6 = {{ 5 + 6 }}</p>
+  <p>{{ bool ? '京中有善口技者': '从此君王不早朝' }}</p>
+  <p>
+    <input type="text" (input)="changeVal()" value="{{dong}}">
+    <span>{{dong}}</span>
+  </p>
+  <p class="red">双向绑定: 语法[(ngModel)] 是一个指令</p>
+  <p>
+    <input type="text" [(ngModel)]="modelVal" value="">
+    <br>{{modelVal}}
+  </p>
+
+  <h1>----------------angular 属性绑定--------------</h1>
+  <p>
+    angular 属性绑定 <br>
+    1. dom属性的绑定 和插值表达式是完全一样的 <br>
+    2. html 属性绑定 <br>
+    3. html 属性绑定和 dom属性的绑定不同 <br>
+       html 属性吧绑定的是初始值 而 dom属性绑定的是当前值 <br>
+       <span class="red">建议使用属性绑定 即双花括号</span>
+  </p>
+  <p>
+    <a href="{{baidu}}">百度</a> &nbsp;&nbsp;
+    <a [href]="baidu">百度</a>
+  </p>
+  <p>
+    <img src="{{img}}" alt="图片">
+    <img [src]="img" alt="图片">
+  </p>
+  <p class="red">
+    html 属性绑定 <br>
+    1. 基本的html属性绑定 [arr.属性名]
+    2. css类绑定 [class] = '表达式' / [class.样式名] = bool值 / [ngClass] = 对象
+      ngClass是angular内置的属性指令 <br>
+    3. 样式绑定 [style.css样式名] = "值" / [ngStyle] = 对象 <br>
+    ng指令的值都是从ts的组件上来的
+  </p>
+  <p>
+    <span [class]="green">属性绑定</span> &nbsp;&nbsp;
+    <span [class.green]='true'>属性绑定</span>
+  </p>
+  <table border="1" cellpadding="0" cellspacing="0">
+    <tr>
+      <th [attr.colspan]="2">表情</th>
+    </tr>
+    <tr><td>1</td><td>2</td></tr>
+  </table>
+  <p [class]="bool?'red':'green'">
+    猜猜我的颜色
+  </p>
+
+  <h1>----------------angular 事件绑定--------------</h1>
+  <p>
+    angular 事件绑定 <br>
+    1. (事件名) = "方法名"<br>
+  </p>
+  <p (click)="msg($event)">
+    点击我试试 {{item}}
+  </p>
+  <p>
+    给元素起别名 #别名 (angular1中没有别名) <br>
+  </p>
+  <p #aa (click)="color(aa)">
+    点击我看看
+  </p>
+
+  <h1>----------------angular 指令--------------</h1>
+  <p>
+    angular 指令 <br>
+    1. 特殊指令: 组件其实就是带有模板指令 <br>
+    2. 属性型指令: 该指令侧重修改元素的内容样式 即外观css <br>
+    3. 结构型指令: 对dom进行操作的指令 (*ngIf *ngFor *ngSwitch *ngSwitchCase), 比如对dom的添加删除移动等 <br>
+    4. <span class="red">* 是用来简化语法的语法糖, 它可以把y*ngIf 转换为 ng-if</span>
+  </p>
+  <p class="red">ng-template中的元素不会渲染到页面中</p>
+  <ng-template>
+    <p>曾经沧海难为水</p>
+  </ng-template>
+  <p *ngIf="bool">
+    天王盖地虎
+  </p>
+  <p *ngIf="!bool">
+    宝塔镇河妖
+  </p>
+  <p class="red">*ngIf不是控制display的，而是控制是否加载dom元素的 和vue中的v-if作用一致</p>
+  <p>*ngFor 是循环指令</p>
+  <ul>
+    <li *ngFor="let item of arrList">{{item}}</li>
+  </ul>
+  <p *ngFor="let item of heroList;let i = index;">
+    <span>第{{ i+1 }}个英雄,</span>
+    <span>姓名:{{item.name}},</span>
+    <span>年龄:{{item.age}}</span>
+  </p>
+  <div [ngSwitch]="witch">
+    <p *ngSwitchCase="'王者荣耀'">王者荣耀游戏</p>
+    <p *ngSwitchCase="'英雄联盟'">英雄联盟游戏</p>
+    <p *ngSwitchCase="'绝地求生'">绝地求生游戏</p>
+    <p *ngSwitchCase="'荒野行动'">荒野行动游戏</p>
+  </div>
+</div>
+
