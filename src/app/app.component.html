@@ -1,10 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1>菜单导航</h1>
 <nav>
-  <a href="javascript" routerLink="/side">side</a> &nbsp;&nbsp;
-  <a href="javascript" routerLink="/home">home</a> &nbsp;&nbsp;
-  <a href="javascript" routerLink="/head">head</a> &nbsp;&nbsp;
-  <a href="javascript" routerLink="/pipe">pipe</a> &nbsp;&nbsp;
-  <a href="javascript" routerLink="/http">http</a> &nbsp;&nbsp;
+  <a href="javascript:;" [routerLink]="['']">首页</a>
+  <a href="javascript:;" [routerLink]="['/side']">绑定数据/事件/属性</a>
+  <a href="javascript:;" [routerLink]="['/home']">设置传值</a>
+  <a href="javascript:;" [routerLink]="['/head']">ElementUI</a>
+  <a href="javascript:;" [routerLink]="['/pipe']">管道</a>
+  <a href="javascript:;" [routerLink]="['/http']">http</a>
 </nav>
 <router-outlet></router-outlet>

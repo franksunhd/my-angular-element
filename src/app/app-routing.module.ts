@@ -23,6 +23,7 @@ import { HttpComponent } from './http/http.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { SideComponent } from './side/side.component';
 import { HomeComponent } from './home/home.component';
+import { IndexComponent } from './index/index.component';
 
 /*
  * 1. 路由是自上而下查找的
@@ -36,6 +37,7 @@ import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
+  {path: '', component: IndexComponent},
   // 1. 设置传值 data中携带需要传递的值
   {path: 'home', component: HomeComponent, data: [{str: '清明时节雨纷纷'}]},
   {path: 'side', component: SideComponent},

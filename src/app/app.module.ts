@@ -26,6 +26,7 @@ import { NumPipe } from './pipe/num.pipe';
 import { HeroService } from './hero/hero.service';
 import { BookService } from './service/book.service';
 import { HomeComponent } from './home/home.component';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   // 调用组件/指令/管道
@@ -39,6 +40,7 @@ import { HomeComponent } from './home/home.component';
     PipePipe,
     NumPipe,
     HomeComponent,
+    IndexComponent,
   ],
   // 调用模块
   imports: [
