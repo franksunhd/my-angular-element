@@ -10,22 +10,29 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeadComponent } from './head/head.component';
 import { SideComponent } from './side/side.component';
-import { HeroService } from './hero/hero.service';
-import { MyDirsDirective } from './myDir/my-dirs.directive';
 import { HttpComponent } from './http/http.component';
 import { PipeComponent } from './pipe/pipe.component';
+
+// 引入指令
+import { MyDirsDirective } from './myDir/my-dirs.directive';
+
+// 引入管道
 import { PipePipe } from './pipe/pipe.pipe';
 import { NumPipe } from './pipe/num.pipe';
 
+// 引入服务
+import { HeroService } from './hero/hero.service';
+import { BookService } from './service/book.service';
+
 @NgModule({
-  // 调用组件
+  // 调用组件/指令/管道
   declarations: [
     AppComponent,
     HeadComponent,
     SideComponent,
-    MyDirsDirective,
     HttpComponent,
     PipeComponent,
+    MyDirsDirective,
     PipePipe,
     NumPipe,
   ],
@@ -39,7 +46,8 @@ import { NumPipe } from './pipe/num.pipe';
   ],
   // 调用服务
   providers: [
-    HeroService
+    HeroService,
+    BookService
   ],
   // 调用依赖
   bootstrap: [AppComponent]
