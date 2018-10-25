@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { HeadComponent } from './head/head.component';
 import { SideComponent } from './side/side.component';
 import { HeroService } from './hero/hero.service';
+import { MyDirDirective } from './myDir/my-dir.directive';
 
 @NgModule({
   // 调用组件
   declarations: [
     AppComponent,
     HeadComponent,
-    SideComponent
+    SideComponent,
+    MyDirDirective
   ],
   // 调用模块
   imports: [
