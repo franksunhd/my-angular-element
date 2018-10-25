@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { HeadComponent } from './head/head.component';
 import { SideComponent } from './side/side.component';
 import { HeroService } from './hero/hero.service';
-import { MyDirDirective } from './myDir/my-dir.directive';
+import { MyDirsDirective } from './myDir/my-dirs.directive';
 
 @NgModule({
   // 调用组件
@@ -19,7 +19,7 @@ import { MyDirDirective } from './myDir/my-dir.directive';
     AppComponent,
     HeadComponent,
     SideComponent,
-    MyDirDirective
+    MyDirsDirective,
   ],
   // 调用模块
   imports: [
