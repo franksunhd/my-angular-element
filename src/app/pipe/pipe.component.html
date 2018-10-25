@@ -1,0 +1,39 @@
+<div>
+  <p>
+    管道: (过滤器) <br>
+    管道的修饰符是 | <br>
+    写法:   要过滤的内容(也可以是变量) | 过滤的规则 <br>
+    过滤的规则也可以是链式写法 即: 要过滤的内容 | 规则1 | 规则2 | 规则3 <br>
+    过滤器分为 内置的过滤器 和 自定义的过滤器
+  </p>
+
+  <p class="red">内置的过滤器</p>
+  <p>
+    大小写过滤: <br>
+    xiao xi zi mu 转换为大写 {{'xiao xie zi mu' | uppercase }} <br>
+    DA XIE ZI MU 转换为小写 {{ 'DA XIE ZI MU' | lowercase }}
+  </p>
+  <p>
+    日期时间过滤: date指定日期格式,可以传参 H:代表24小时制 h代表12小时制<br>
+    {{ objDate | date }} <br>
+    {{ objDate | date:"yyyy年MM月dd日  HH:mm:ss" }} <br>
+  </p>
+
+  <p>
+    number过滤: 小数点前代表取几位,不够补0,小数点后代表范围，会进行四舍五入 <br>
+    {{ 10000 | number }} <br>
+    {{ 3.1415926 | number:"3.2-3" }}
+  </p>
+
+  <p>
+    货币过滤: <br>
+    {{ 1200 | currency:'￥' }} <br>
+    {{ 0.1 | currency:'$' }}
+  </p>
+
+  <p>
+    自定义过滤方法: <br>
+    <span class="red">{{'上课不认真 ' | pipe }}</span> <br>
+    <span class="green">0123456789 转换为 {{'0123456789' | num }}</span>
+  </p>
+</div>
