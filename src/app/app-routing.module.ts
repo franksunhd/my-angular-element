@@ -25,6 +25,9 @@ import { SideComponent } from './side/side.component';
 import { HomeComponent } from './home/home.component';
 import { IndexComponent } from './index/index.component';
 import { ProjectComponent } from './project/project.component';
+import { FatherRouteComponent} from './father-route/father-route.component';
+import { FirstSonRouteComponent } from './first-son-route/first-son-route.component';
+import { SecondSonRouteComponent} from './second-son-route/second-son-route.component';
 
 /*
  * 1. 路由是自上而下查找的
@@ -48,6 +51,11 @@ const routes: Routes = [
   {path: 'project/:name/:age', component: ProjectComponent},
   // 3. 把要传的值 放到 a 标签上 json数据放到 queryParams 上
   {path: 'head', component: HeadComponent},
+  // 4. 父子路由
+  {path: 'father', component: FatherRouteComponent, children: [
+      {path: 'firstSon', component: FirstSonRouteComponent},
+      {path: 'secondSon', component: SecondSonRouteComponent},
+  ]},
 ];
 
 
