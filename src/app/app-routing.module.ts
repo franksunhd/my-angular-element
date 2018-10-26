@@ -30,6 +30,7 @@ import { FirstSonRouteComponent } from './first-son-route/first-son-route.compon
 import { SecondSonRouteComponent} from './second-son-route/second-son-route.component';
 import { FuzhuRouteComponent } from './fuzhu-route/fuzhu-route.component';
 import { CommonFirstComponent } from './common-first/common-first.component';
+import {C404Component} from './c404/c404.component';
 
 /*
  * 1. 路由是自上而下查找的
@@ -62,6 +63,8 @@ const routes: Routes = [
   {path: 'fuZhu', component: FuzhuRouteComponent, outlet: 'liBai'},
   // 6. 组件传值
   {path: 'common', component: CommonFirstComponent},
+  // 7. ** 通配路由 找不到路由的时候 显示通配路由
+  {path: '**', component: C404Component}
 ];
 
 

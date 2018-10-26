@@ -34,6 +34,7 @@ import { SecondSonRouteComponent } from './second-son-route/second-son-route.com
 import { FuzhuRouteComponent } from './fuzhu-route/fuzhu-route.component';
 import { CommonFirstComponent } from './common-first/common-first.component';
 import { CommonSecondComponent } from './common-second/common-second.component';
+import { C404Component } from './c404/c404.component';
 
 @NgModule({
   // 调用组件/指令/管道
@@ -55,6 +56,7 @@ import { CommonSecondComponent } from './common-second/common-second.component';
     FuzhuRouteComponent,
     CommonFirstComponent,
     CommonSecondComponent,
+    C404Component,
   ],
   // 调用模块
   imports: [
