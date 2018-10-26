@@ -1,0 +1,10 @@
+.wai {
+  border: 1px solid red;
+  padding: 20px;
+}
+
+h2,
+p {
+  font-size: 20px;
+  line-height: 1.5;
+}
