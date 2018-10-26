@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-/*全局引用css*/
+/* 全局引用css */
 @import "~element-angular/theme/index.css";
+/* 格式化代码 */
 @import "assets/css/base.css";
+/* 重置 elementUI 代码 */
 @import "assets/css/common.css";
+/* head代码 */
+@import "assets/css/head.css";

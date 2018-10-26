@@ -42,11 +42,12 @@ const routes: Routes = [
   // 1. 设置传值 data中携带需要传递的值
   {path: 'home', component: HomeComponent, data: [{str: '清明时节雨纷纷'}]},
   {path: 'side', component: SideComponent},
-  {path: 'head', component: HeadComponent},
   {path: 'pipe', component: PipeComponent},
   {path: 'http', component: HttpComponent},
   // 2. 路径传值
   {path: 'project/:name/:age', component: ProjectComponent},
+  // 3. 把要传的值 放到 a 标签上 json数据放到 queryParams 上
+  {path: 'head', component: HeadComponent},
 ];
 
 

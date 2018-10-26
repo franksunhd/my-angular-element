@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-head',
@@ -12,10 +13,14 @@ export class HeadComponent implements OnInit {
     { id: 2, value: '女'},
   ];
   sex = '2';
-  constructor() {
+
+  age: Number;
+  constructor(private head: ActivatedRoute) {
   }
 
   ngOnInit() {
+    this.userName = this.head.snapshot.queryParams.name;
+    this.age = this.head.snapshot.queryParams.age;
   }
 
 }

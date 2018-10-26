@@ -1,0 +1,6 @@
+@charset "UTF-8";
+/*head页面*/
+.headBox .select .el-select {
+  width: 100%;
+  display: inline;
+}

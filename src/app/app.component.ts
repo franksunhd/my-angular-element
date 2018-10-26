@@ -8,4 +8,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Angular';
+  list = {
+    name: '孙思研',
+    age: 25
+  };
 }
