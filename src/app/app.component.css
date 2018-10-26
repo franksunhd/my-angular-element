@@ -2,5 +2,16 @@ a {
   color: #f67b00;
   font-size: 30px;
   line-height: 1.5;
-  margin: 20px;
+  margin-right: 40px;
+}
+
+.border {
+  margin: 30px;
+  border: 1px solid #333;
+  padding: 30px;
+}
+
+h1,
+nav {
+  margin: 30px;
 }
