@@ -9,7 +9,13 @@
   <a href="javascript:;" [routerLink]="['/http']">http</a>
   <a href="javascript:;" [routerLink]="['/project/frankSun/33']">路径传值</a>
   <a href="javascript:;" [routerLink]="['/father']">父子路由</a>
+  <a href="javascript:;" [routerLink]="[{outlets:{liBai: 'fuZhu'}}]">辅助路由</a>
+  <a href="javascript:;" [routerLink]="[{outlets:{liBai: null}}]">辅助路由</a>
 </nav>
 <div class="border">
   <router-outlet></router-outlet>
+</div>
+<hr>
+<div>
+  <router-outlet name="liBai"></router-outlet>
 </div>

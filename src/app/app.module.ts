@@ -31,6 +31,7 @@ import { ProjectComponent } from './project/project.component';
 import { FatherRouteComponent } from './father-route/father-route.component';
 import { FirstSonRouteComponent } from './first-son-route/first-son-route.component';
 import { SecondSonRouteComponent } from './second-son-route/second-son-route.component';
+import { FuzhuRouteComponent } from './fuzhu-route/fuzhu-route.component';
 
 @NgModule({
   // 调用组件/指令/管道
@@ -49,6 +50,7 @@ import { SecondSonRouteComponent } from './second-son-route/second-son-route.com
     FatherRouteComponent,
     FirstSonRouteComponent,
     SecondSonRouteComponent,
+    FuzhuRouteComponent,
   ],
   // 调用模块
   imports: [

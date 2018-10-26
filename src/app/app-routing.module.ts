@@ -28,6 +28,7 @@ import { ProjectComponent } from './project/project.component';
 import { FatherRouteComponent} from './father-route/father-route.component';
 import { FirstSonRouteComponent } from './first-son-route/first-son-route.component';
 import { SecondSonRouteComponent} from './second-son-route/second-son-route.component';
+import { FuzhuRouteComponent } from './fuzhu-route/fuzhu-route.component';
 
 /*
  * 1. 路由是自上而下查找的
@@ -56,6 +57,8 @@ const routes: Routes = [
       {path: 'firstSon', component: FirstSonRouteComponent},
       {path: 'secondSon', component: SecondSonRouteComponent},
   ]},
+  // 5. 辅助路由
+  {path: 'fuZhu', component: FuzhuRouteComponent, outlet: 'liBai'},
 ];
 
 
